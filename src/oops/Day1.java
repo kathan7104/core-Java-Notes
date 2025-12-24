@@ -7,10 +7,12 @@ public class Day1 {
 		return (n1+n2);
 	}
 	public int factorial(int n) {
-		int res = 1, i;
-        for (i = 2; i <= n; i++)
-            res *= i;
-        return res;
+		if (n <= 1) return 1;
+		int res = 1;
+		for (int i = 2; i <= n; i++) {
+			res *= i;
+		}
+		return res;
 	}
 	public int square(int n) {
 		return n * n;
@@ -24,6 +26,15 @@ public class Day1 {
 			if (n % i == 0) return false;
 		}
 		return true;
+	}
+	public int reverseNumber(int n) {
+		int rem, rev = 0;
+		while(n != 0) {
+			rem = n % 10;
+			rev = (rev * 10) + rem;
+			n /= 10;
+		}
+		return rev;
 	}
 	//main method
 	public static void main(String args[]) {
@@ -51,17 +62,13 @@ public class Day1 {
 					}
 				}
 				case 2:{
+					//to check whether a number is positive (IF STATEMENT - no else).
 					System.out.println("Enter a number: ");
 					int n1=sc.nextInt();
-					//positive number
 					if(n1>=0) {
 						System.out.println("number is positive");
-						break;
 					}
-					else {
-						System.out.println("number is not positive");
-						break;
-					}
+					break;
 				}
 				case 3:{
 					//person is eligible to vote
@@ -99,7 +106,9 @@ public class Day1 {
 				case 6:{
 					//print even numbers from 1 to 50.
 					for(int i=1;i<=50;i++) {
-						if(i%2==0) {System.out.println(i);}else {continue;}
+						if(i%2==0) {
+							System.out.println(i);
+						}
 					}
 					break;
 				}
@@ -107,27 +116,20 @@ public class Day1 {
 					//reverse a number.
 					System.out.println("enter a number");
 					int n=sc.nextInt();
-					int rem,rev=0;
-					while(n!=0) {
-						rem=n%10;
-						rev=(rev*10)+rem;
-						n/=10;
-					}
-					System.out.print(rev);
+					System.out.println("Reversed number: "+obj.reverseNumber(n));
 					break;
 				}
 				case 8:{
 					//check whether a number is palindrome.
 					System.out.println("enter a number");
 					int n=sc.nextInt();
-					int rem,rev=0;
-					int temp=n;
-					while(n!=0) {
-						rem=n%10;
-						rev=(rev*10)+rem;
-						n/=10;
+					int rev=obj.reverseNumber(n);
+					if(n==rev) {
+						System.out.println("number is palindrome.");
+					} else {
+						System.out.println("number is 'not' palindrome.");
 					}
-					if(temp==rev) {System.out.println("number is palindrome.");break;}else {System.out.println("number is 'not' palindrome.");break;}
+					break;
 				}
 				case 9:{
 					//print numbers from 1 to 10 using do-while.
@@ -168,7 +170,10 @@ public class Day1 {
 				case 13:{
 					//to stop loop when number 5 is encountered.
 					for(int i=0;i<10;i++) {
-						if(i==5) {break;}System.out.println(i);
+						if(i==5) {
+							break;
+						}
+						System.out.println(i);
 					}
 					break;
 				}
@@ -190,9 +195,7 @@ public class Day1 {
 						if(i%2==0) {
 							continue;
 						}
-						else {
-							System.out.println(i);
-						}
+						System.out.println(i);
 					}
 					break;
 				}
@@ -257,11 +260,11 @@ public class Day1 {
 					break;
 				}
 				case 23:{
-					//to check if a number is even.
+					//to check if a number is divisible by 3 (IF-THEN).
 					System.out.println("Enter a number: ");
 					int n1=sc.nextInt();
-					if(n1%2==0) {
-						System.out.println("Number is even");
+					if(n1%3==0) {
+						System.out.println("Number is divisible by 3");
 					}
 					break;
 				}
@@ -394,17 +397,15 @@ public class Day1 {
 					break;
 				}
 				case 34:{
-					//to display grade (A/B/C/D) based on marks.
+					//to display grade (A/B/C/D) based on marks using switch.
 					System.out.println("Enter marks: ");
 					int marks=sc.nextInt();
-					if(marks>=90) {
-						System.out.println("Grade: A");
-					} else if(marks>=75) {
-						System.out.println("Grade: B");
-					} else if(marks>=60) {
-						System.out.println("Grade: C");
-					} else {
-						System.out.println("Grade: D");
+					int gradeRange = (marks >= 90) ? 1 : (marks >= 75) ? 2 : (marks >= 60) ? 3 : 4;
+					switch(gradeRange) {
+						case 1: System.out.println("Grade: A"); break;
+						case 2: System.out.println("Grade: B"); break;
+						case 3: System.out.println("Grade: C"); break;
+						case 4: System.out.println("Grade: D"); break;
 					}
 					break;
 				}
