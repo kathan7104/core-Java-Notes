@@ -81,30 +81,61 @@ class MusicPlayer implements Playable {
 
 public class Day2Inheritance {
 	public static void main(String[] args) {
-		// Part A
-		Dog dog = new Dog();
-		dog.speak();
-		dog.bark();
+		java.util.Scanner sc = new java.util.Scanner(System.in);
+		boolean running = true;
 
-		// Part B
-		Bank bankRef = new MyBank(); // parent reference to child object
-		System.out.println("Interest rate: " + bankRef.getInterest());
+		while (running) {
+			System.out.println("\n--- Inheritance Menu ---");
+			System.out.println("1. Part A - Single Inheritance (Animal -> Dog)");
+			System.out.println("2. Part B - Method Overriding (Bank -> MyBank)");
+			System.out.println("3. Part C - Hierarchical (Vehicle -> Car/Bike)");
+			System.out.println("4. Part D - Multilevel (A -> B -> C)");
+			System.out.println("5. Part E - Hybrid via Interface (Playable -> MusicPlayer)");
+			System.out.println("6. Exit");
+			System.out.print("Choose an option (1-6): ");
 
-		// Part C
-		Vehicle v1 = new Car();
-		Vehicle v2 = new Bike();
-		v1.honk();
-		v2.honk();
-
-		// Part D
-		C cObj = new C();
-		cObj.fromA();
-		cObj.fromB();
-		cObj.fromC();
-
-		// Part E
-		Playable player = new MusicPlayer();
-		player.play();
-		player.stop();
+			int choice = sc.nextInt();
+			switch (choice) {
+				case 1: {
+					Dog dog = new Dog();
+					dog.speak();
+					dog.bark();
+					break;
+				}
+				case 2: {
+					Bank bankRef = new MyBank(); // parent reference to child object
+					System.out.println("Interest rate: " + bankRef.getInterest());
+					break;
+				}
+				case 3: {
+					Vehicle v1 = new Car();
+					Vehicle v2 = new Bike();
+					v1.honk();
+					v2.honk();
+					break;
+				}
+				case 4: {
+					C cObj = new C();
+					cObj.fromA();
+					cObj.fromB();
+					cObj.fromC();
+					break;
+				}
+				case 5: {
+					Playable player = new MusicPlayer();
+					player.play();
+					player.stop();
+					break;
+				}
+				case 6: {
+					System.out.println("Exiting...");
+					running = false;
+					break;
+				}
+				default:
+					System.out.println("Invalid choice. Try again.");
+			}
+		}
+		sc.close();
 	}
 }
