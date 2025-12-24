@@ -44,9 +44,70 @@ public class Day1 {
 		Scanner sc=new Scanner(System.in);
 		boolean x=true;
 		while(x) {
-			System.out.println("select an option:");
-			int ch=sc.nextInt();
 			
+			//menu
+			System.out.println("1. Even or Odd");
+			System.out.println("2. Positive or Negative");
+			System.out.println("3. Eligible to vote");
+			System.out.println("4. Largest of two numbers");
+			System.out.println("5. Print numbers from 1 to 10");
+			System.out.println("6. Print even numbers from 1 to 50");
+			System.out.println("7. Reverse a number");
+			System.out.println("8. Check whether a number is palindrome");
+			System.out.println("9. Print numbers from 1 to 10 using do-while");
+			System.out.println("10. To display menu until user selects Exit");
+			System.out.println("11. To print all elements of an array");
+			System.out.println("12. To calculate sum of array elements");
+			System.out.println("13. To stop loop when number 5 is encountered");
+			System.out.println("14. To search an element and break when found");
+			System.out.println("15. To skip printing even numbers");
+			System.out.println("16. To skip number 7 while printing 1 to 20");
+			System.out.println("17. A method returns sum of two numbers");
+			System.out.println("18. To return factorial of a number");
+			System.out.println("19. To print 'Good Morning' if time is before 12");
+			System.out.println("20. To check if a number is greater than 100");
+			System.out.println("21. To check if a student has passed internal assessment (marks >= 20)");
+			System.out.println("22. To print 'Eligible for exam' if attendance is >= 75%");
+			System.out.println("23. To check if a number is divisible by 3 (IF-THEN)");
+			System.out.println("24. To display 'Discount Applied' if bill amount is above ₹5000");
+			System.out.println("25. To check if a character is a vowel");
+			System.out.println("26. To print 'Welcome Admin' if user role is admin");
+			System.out.println("27. To check whether a number is positive or negative");
+			System.out.println("28. To check pass or fail based on marks");
+			System.out.println("29. To check eligibility for driving license");
+			System.out.println("30. To print day name based on day number");
+			System.out.println("31. Simple calculator using switch");
+			System.out.println("32. To display month name based on month number");
+			System.out.println("33. Menu-driven food ordering system");
+			System.out.println("34. To display grade (A/B/C/D) based on marks using switch");
+			System.out.println("35. To calculate sum of first 10 numbers");
+			System.out.println("36. To print multiplication table of a given number");
+			System.out.println("37. To print numbers in reverse order");
+			System.out.println("38. To print numbers from 1 to N");
+			System.out.println("39. To calculate sum of digits of a number");
+			System.out.println("40. To count number of digits in a number");
+			System.out.println("41. To validate PIN number");
+			System.out.println("42. To keep asking input until correct password is entered");
+			System.out.println("43. To calculate factorial using do-while loop");
+			System.out.println("44. To find largest element in an array");
+			System.out.println("45. To print student names stored in an array");
+			System.out.println("46. To count even numbers in an array");
+			System.out.println("47. To exit loop when user enters 0");
+			System.out.println("48. To stop printing numbers after 50");
+			System.out.println("49. To terminate loop on negative input");
+			System.out.println("50. To skip multiples of 5");
+			System.out.println("51. To skip printing negative numbers");
+			System.out.println("52. To skip a particular student roll number");
+			System.out.println("53. To skip a particular student roll number");
+			System.out.println("54. To skip a particular student roll number");
+			System.out.println("55. To skip a particular student roll number");
+			System.out.println("56. To skip a particular student roll number");
+
+			//select an option from 1 to 56
+			System.out.println("select an option from 1 to 56:");
+			int ch=sc.nextInt();
+
+			//switch case
 			switch (ch) {
 				case 1: {
 					System.out.println("Enter a number: ");
