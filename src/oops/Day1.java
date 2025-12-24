@@ -98,10 +98,10 @@ public class Day1 {
 			System.out.println("50. To skip multiples of 5");
 			System.out.println("51. To skip printing negative numbers");
 			System.out.println("52. To skip a particular student roll number");
-			System.out.println("53. To skip a particular student roll number");
-			System.out.println("54. To skip a particular student roll number");
-			System.out.println("55. To skip a particular student roll number");
-			System.out.println("56. To skip a particular student roll number");
+			System.out.println("53. to return square of a number.");
+			System.out.println("54. to return maximum of two numbers.");
+			System.out.println("55. to check prime number using return.");
+			System.out.println("56. exit");
 
 			//select an option from 1 to 56
 			System.out.println("select an option from 1 to 56:");
