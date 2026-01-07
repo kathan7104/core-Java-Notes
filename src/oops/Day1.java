@@ -41,7 +41,7 @@ public class Day1 {
 		Day1 obj=new Day1();//class object creation
 		//calling display method using object 'obj'.
 		
-		Scanner sc=new Scanner(System.in);
+		Scanner sc=new Scanner(System.in);		
 		boolean x=true;
 		while(x) {
 			
