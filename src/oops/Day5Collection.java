@@ -1,7 +1,11 @@
 package oops;
 
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Stack;
 
 public class Day5Collection {
 
@@ -53,6 +57,64 @@ Use addFirst() and addLast() methods to manipulate the list.*/
 		
 		System.out.print("\n"+ll);
 		
+		
+		List al=new ArrayList();
+		
+		al.add(10);
+		al.add("java");
+		
+		System.out.print("\n"+al+"\n");
+		
+		
+		
+		
+		// Create Stack
+        Stack<Integer> stack = new Stack<>();
+
+        // Check if empty
+        System.out.println("Is stack empty? " + stack.empty());
+
+        // Push elements
+        stack.push(78);
+        stack.push(113);
+        stack.push(90);
+        stack.push(120);
+
+        //
+        System.out.println("Stack elements: " + stack);
+
+        // Peek top element
+        System.out.println("Top element (peek): " + stack.peek());
+
+        // Pop element
+        System.out.println("Removed element (pop): " + stack.pop());
+
+        // Print stack again
+        System.out.println("Stack after pop: " + stack);
+
+        // Search element
+        System.out.println("Position of 78 (from top): " + stack.search(78));
+        
+        //Deque
+        Deque<String> dq = new ArrayDeque<>();
+
+        
+        dq.addFirst("Front-A");
+        dq.addLast("End-B");
+        dq.add("Middle");   
+        dq.addFirst("Front-C");
+
+        System.out.println("Deque Elements: " + dq);
+
+       
+        System.out.println("Removed from Front: " + dq.removeFirst());
+        System.out.println("Removed from End: " + dq.removeLast());
+
+        
+        System.out.println("First Element: " + dq.peekFirst());
+        System.out.println("Last Element: " + dq.peekLast());
+
+        System.out.println("Final Deque: " + dq);
 		
 	}
 
