@@ -1,26 +1,21 @@
 # Instructions to Push to GitHub
 
-## Step 1: Create the Repository on GitHub
-1. Go to https://github.com/new
-2. Repository name: `core java`
-3. Set visibility to **Private**
-4. **DO NOT** initialize with README, .gitignore, or license
-5. Click "Create repository"
+**Repo:** https://github.com/kathan7104/core-Java-Notes  
+**Username:** kathan7104
 
-## Step 2: Push the Code
-After creating the repository, run these commands:
+## Push all changes
+
+From a terminal (PowerShell or Command Prompt), run:
 
 ```powershell
-cd "C:\Users\kathan\eclipse-workspace\oops"
-git remote add origin https://github.com/YOUR_USERNAME/core-java.git
-git branch -M main
+cd "d:\eclipse-workspace\oops"
+git add -A
+git commit -m "Add Day10Threads.java and other updates"
 git push -u origin main
 ```
 
-**Note:** Replace `YOUR_USERNAME` with your actual GitHub username. If your repository name has spaces, GitHub will convert it to `core-java` in the URL.
+If you see **"index.lock"** or "Another git process seems to be running":
+- Close any IDE/tool using this folder, then delete `d:\eclipse-workspace\oops\.git\index.lock` and run the commands again.
 
-If you're using SSH instead of HTTPS:
-```powershell
-git remote add origin git@github.com:YOUR_USERNAME/core-java.git
-```
+**Auth:** When you `git push`, use your GitHub username (`kathan7104`) and a [Personal Access Token](https://github.com/settings/tokens) (not your GitHub password).
 
